@@ -1,0 +1,348 @@
+:root {
+    font-family: 'Lato' sans-serif;
+    --light-color: #fafafa;
+    --primary-color: #03a9f4;
+    --secondary-color: #1484cd;
+    --dark-color: #263238;
+    --faded-color: #535353;
+    --light-dark-color: #eeeeee;
+    --max-width: 1100px;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: var(--light-color);
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+p {
+    margin: .5rem 0;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    background: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Staatliches', cursive;
+    margin-bottom: .55rem;
+    line-height: 1.3;
+}
+
+
+.container {
+    max-width: var(--max-width);
+    overflow: hidden;
+    padding: 0 2rem;
+    margin: auto;
+}
+
+.btn {
+    display: inline-block;
+    color: var(--light-color);
+    background: var(--primary-color);
+    padding: 10px 20px;
+    font-size: 30px;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:hover  {
+    background: var(--secondary-color);
+}
+span {
+    color: var(--primary-color);
+}
+
+/* Navbar */
+
+#main-nav .container ul {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 30px;
+}
+
+#main-nav .container img {
+    width: 260px;
+    align-self: flex-start;
+    padding: 30px;
+}
+
+#main-nav .container div {
+    display: flex;
+}
+
+#main-nav ul li a {
+    padding: 30px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#main-nav ul li a:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+
+
+/* Showcase */
+#showcase .showcase-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 60px;
+    height: 100vh;
+}
+
+#showcase .showcase-container .showcase-content p:last-child {
+    font-size: 40px;
+    padding-bottom: 30px;
+}
+
+
+#showcase .showcase-container .showcase-content p:first-child {
+    font-size: 30px;
+}
+
+#showcase .showcase-container .showcase-content h2 {
+    font-size: 80px;
+    padding: 40px;
+    
+}
+
+#showcase .showcase-container .showcase-content div:last-child {
+    display: flex;
+    
+}
+#showcase .showcase-container .showcase-content div:last-child a {
+    margin-right: 30px;
+}
+
+#showcase .showcase-container .showcase-content div:last-child a:last-child {
+    background: var(--light-dark-color);
+    color: var(--primary-color);
+ 
+}
+
+
+#showcase .showcase-container .showcase-content div:last-child a:last-child:hover {
+    color: var(--light-dark-color);
+    background: var(--primary-color);
+}
+
+
+/* Projects */
+#projects {
+    padding-top: 40px;
+    height: 100vh;
+}
+
+#projects .container .project-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+#projects .container .project-content div:first-child h1{
+    font-size: 50px;
+    padding: 40px;
+}
+
+#projects .container .project-content div:first-child p {
+    font-size: 30px;
+    padding-bottom: 40px;
+}
+
+
+#projects .container .project-content div:first-child div a {
+    width: 70%;
+    text-align: center;
+}
+
+
+#projects .container .project-content div:last-child img {
+    opacity: 1;
+    border-radius: 5px;
+}
+
+
+/* Experience */
+
+#experience {
+    background-color: var(--light-dark-color);
+}
+
+#experience .container .showcase-experience {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 60px;
+    grid-gap: 2rem;
+}
+
+  
+.card {
+
+    padding: 1rem;
+    padding-left: 20px;
+    border-radius: 10px;
+}
+
+.card:hover {
+        background: var(--faded-color);
+}
+
+
+#experience .container .showcase-experience .card p {
+    font-size: 20px;
+}
+
+#experience .container .showcase-experience div {
+    padding: 20px;
+    margin: 20px;
+}
+
+#experience .container .showcase-experience:last-child card {
+    padding-top: 30px;
+}
+
+#experience .container .showcase-experience > div {
+    width: 100%;
+}
+
+/* Footer */
+#main-footer {
+    padding-top: 40px;
+}
+
+#main-footer .container .card p {
+    font-size: 30px;
+    text-align: center;
+}
+
+#main-footer .container input[type="text"], 
+#main-footer .container input[type="email"] {
+    border: none;
+    font-size: 20px;
+    padding: 20px;
+    width: 100%;
+    border-radius: 5px;
+    border-bottom: 1px solid var(--faded-color);
+}
+
+#main-footer .container input[type="text"]:hover, 
+#main-footer .container input[type="email"]:hover {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+    
+}
+
+#main-footer .container input[type="submit"] {
+    font-size: 30px;
+}
+
+
+
+#main-footer .container div:last-child {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+@media(max-width: 768px) {
+    #main-nav .container > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #main-nav .container img {
+        width: 260px;
+        align-self: center;
+        padding: 30px;
+        
+    }
+
+    #main-nav .container ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        padding: 30px;
+    }
+    #main-nav ul li a {
+        padding: 20px;
+        font-weight: bold;
+        font-size: 15px;
+        
+    }
+    #main-nav ul li a:hover {
+        color: var(--primary-color);
+        border-bottom: none;
+    }
+
+    #showcase .showcase-container {
+        grid-template-columns: 1fr;
+        padding-top: 60px;
+        height: 100%;
+        grid-gap: 16px;
+    }
+
+    #showcase .showcase-container div:last-child {
+        padding-top: 40px;
+    }
+
+    .btn {
+        font-size: 20px;
+    }
+
+    #showcase .showcase-container .showcase-content div:last-child a {
+        margin: auto;
+    }
+
+    #showcase .showcase-container .showcase-content p,
+    #showcase .showcase-container .showcase-content h2,
+    #projects .container .project-content div:first-child h1,
+    #projects .container .project-content div:first-child p, 
+    #projects .container .project-content div {
+        text-align: center;
+    }
+    
+    #projects .container .project-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+        height: 100%;
+    }
+
+    #experience .container .showcase-experience {
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        height: 100%;
+    }
+
+    #main-footer .container .card p {
+        font-size: 6vw;
+        
+    }
+
+    #main-footer .container input[type="submit"] {
+        font-size: 20px;
+    }
+}
