@@ -2,7 +2,7 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const Contact = require('./models')
+const Contact = require('./models/models')
 const bodyparser = require('body-parser')
 dotenv.config()
 app = express();
