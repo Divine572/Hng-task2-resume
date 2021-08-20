@@ -15,7 +15,8 @@ app.use(bodyparser.urlencoded({ extended: true }))
 
 
 
-mongoose.connect('mongodb://localhost:27017/resume',
+// mongoose.connect('mongodb://localhost:27017/resume',
+mongoose.connect(process.env.MONGODB_URI,
     { useNewUrlParser: true ,
      useUnifiedTopology: true,useCreateIndex:true })
     .then(() => console.log('Connected to mongodb..'))
@@ -78,7 +79,6 @@ app.post('/', async (req, res) => {
 
 
 
-const uri = process.env.MONGODB_URI;
 const PORT = process.env.PORT || 7000;
 
 app.listen(PORT, () => {
