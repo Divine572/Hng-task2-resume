@@ -16,9 +16,9 @@ const contactSchema = new mongoose.Schema({
          validate: {
         validator: function(v) {
             return emailRegexVal.test(v);
+            },
         },
         message: (mail) => `${mail.value} is not a valid email address !`,
-    },
         maxlength: 50,
         minlength: 5,
         required: true
